@@ -2,10 +2,9 @@ from multiprocessing import context
 from fastapi import FastAPI, Request, Form, File, UploadFile
 from fastapi.responses import FileResponse
 from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import pandas as pd
-import os
+
 from pysentimiento import create_analyzer
 analyzer = create_analyzer(task="sentiment", lang="es")
 
